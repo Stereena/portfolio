@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stereena Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+	body {
+  background: radial-gradient(circle at top left, #2b1055, #1f0036, #0a001f);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+.typing-heading, .typing-navbar {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+	.card{
+		 padding: 10px;
+  border-radius: 16px;
+  background: #0d0d0d;
+  color: white;
+  border: 3px solid transparent;
+  background-image: 
+    linear-gradient(#0d0d0d, #0d0d0d),
+    linear-gradient(45deg, #ff00ff, #8a2be2, #00ffff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4),
+              0 0 30px rgba(138, 43, 226, 0.5),
+              0 0 40px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: scale(1.05);
+}
+	}
+    .hero {
+      background: linear-gradient(to bottom right, lightpink, blueviolet);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .card-body.animate {
+      animation: slideUp 1.5s ease-out;
+    }
+
+    img.animate {
+      animation: zoomIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+<body>
+	  <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-dark ">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+                  <a class="navbar-brand text-white fw-bold typing-navbar" href="#">
+  <i class="fas fa-code me-2"></i> <span id="typing-name"></span>
+</a>
+
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link " href="#" style="color:white;">Home</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#about" style="color:white;">About</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link " href="#projects" style="color:white;">Project</a>
+                </li>
+               <li class="nav-item">
+                 <a class="nav-link " href="#skill" style="color:white;">Skills</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="#contact" style="color:white;">Contact</a>
+                </li>
+            </ul>	
+	    </nav>
+	<section class="hero py-5"  style="color:floralwhite; background: linear-gradient(to bottom right, lightpink, blueviolet);">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-8 order-md-1 text-center text-md-start">
+				  <h1 id="typing-title" class="typing-heading"></h1>
+			     <p>I’m a Web Developer in training, currently building a strong foundation in HTML, CSS, Bootstrap, JavaScript, Python, and SQL. I'm actively expanding my skills into React.js and Django as I progress through a full stack development course. I enjoy crafting clean, responsive user interfaces and bringing them to life with functionality and logic.
+                 I’m passionate about learning modern technologies and excited to grow as a developer by building real-world projects and collaborating on impactful web applications.</p>
+			     <a href="#experience" class="btn btn-dark me-2" style="color:white;">Hire Me</a>
+                 <a href="file:///C:/Users/bibin/Downloads/sterena.resume.pdf" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" style="color:white;">Resume</a>
+				</div>
+				<div class="col-md-4 text-center mt-6 pt-5">
+			      <img src="C:\Users\bibin\Desktop\Pictures\Saved Pictures\WhatsApp Image 2025-07-07 at 13.14.35_3e50ea19.jpg" class="rounded img-fluid" alt = "Responsive Image" style="max-width: 100%; height: auto;" > 
+		        </div>
+			</div>
+		</div>
+	</section>
+  <section id="about" class="py-5" style="background:#C9A0DC">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:white;">ABOUT ME</h2>
+    <div class="row align-items-stretch">
+      
+      <!-- Left Column: Text Content -->
+      <div class="col-md-7">
+        <div class="card shadow border-0">
+          <div class="card-body p-4" style="color:white; background: linear-gradient(135deg, #FF69B4, #8A2BE2);">
+            <p class="lead">
+              Hello! I'm <strong>Stereena Mary Patrick</strong>, a B.Tech graduate in <strong>Electronics and Communication Engineering</strong> with a strong interest in software development.
+            </p>
+            <p>
+              I'm currently enrolled in a <strong>Full Stack Python Development</strong> course and learning HTML, CSS, JavaScript, Bootstrap, Python, SQL — while diving into Django, React, and Git.
+            </p>
+            <p>
+              I’m also exploring <strong>Digital Marketing</strong> and <strong>Generative AI</strong> to expand my versatility in tech.
+            </p>
+            <p>
+              My goal is to become a <strong>skilled web developer</strong> contributing to real-world software projects.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div class="container-fluid col-md-5 d-flex">
+        <img src="https://t4.ftcdn.net/jpg/07/44/39/67/360_F_744396718_RZ6UK8azeTMXPA5dSYVPrRGVNUmK2FMf.jpg" class="img-fluid rounded shadow w-100" style="object-fit: cover;">
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="projects" class="py-5 " style="background:linear-gradient(to left, #FFC0CB, #BA55D3, #800080);">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color:project;">Projects</h2>
+
+    <!-- ⚙️ Electronics Projects -->
+    <h4 class="mb-4" style="color:white;">⚙️ Electronics Projects</h4>
+    <div class="row g-4 mb-5">
+      <!-- Pelican Crossing -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://www.driving-lessons-kettering.co.uk/wp-content/uploads/2020/01/pelican-crossing-1.jpg" class="card-img-top" alt="Pelican Crossing Project"  style="height: 180px; object-fit: cover;" >
+          <div class="card-body">
+            <h5 class="card-title">Pelican Crossing System</h5>
+            <p class="card-text">Arduino-based pedestrian crossing using IR sensors for safe and smart traffic control.</p>
+            <p><strong>Tools:</strong> Arduino, IR Sensors, C</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Railway Monitoring -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://www.selectravision.com/photos/products/track/trackT%20-%20measuring%20tracks%20-%20real.jpg" class="card-img-top" alt="Railway Track Monitoring"   style="height: 180px; object-fit: cover;" >
+          <div class="card-body">
+            <h5 class="card-title">Railway Track Monitoring Tool</h5>
+            <p class="card-text">Real-time railway defect detection with GPS alert system for enhanced safety and monitoring.</p>
+            <p><strong>Tools:</strong> GPS, Sensors, Embedded</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💻 Web Development Projects -->
+    <h4 class="mb-4" style="color:white;">💻 Web Development Projects</h4>
+    <div class="row g-4">
+
+      <!-- Portfolio Website (Current Project) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Personal Portfolio Website</h5>
+            <p class="card-text">A responsive and interactive personal portfolio showcasing my skills, projects, and career journey. Built using modern web technologies.</p>
+            <p><strong>Tools:</strong> HTML, CSS, Bootstrap, JavaScript</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Live Preview</a>
+            <a href="https://github.com/yourusername/portfolio" class="btn btn-outline-secondary btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Page -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Responsive Login Page</h5>
+            <p class="card-text">Mobile-first login form styled with media queries to adapt seamlessly to different devices.</p>
+            <p><strong>Tools:</strong> HTML, CSS</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">JavaScript Calculator</h5>
+            <p class="card-text">A basic calculator that performs all four arithmetic operations using custom JS functions.</p>
+            <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lottery Draw -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Lottery Draw Web App</h5>
+            <p class="card-text">Random winner generator styled with Bootstrap modals and colorful console feedback.</p>
+            <p><strong>Tools:</strong> JavaScript, Bootstrap</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Skill Section -->
+<section id="skill" class="container-fluid mb-0 pb-0" style="background: linear-gradient(to bottom right, lightpink, blueviolet);">
+  <h2 class="section-title text-white pt-4">Skills</h2>
+  <ul class="text-white pb-3">
+    <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, JavaScript</li>
+    <li><strong>Backend:</strong> Python, SQL (PostgreSQL)</li>
+    <li><strong>Currently Learning:</strong> Django, React, Git</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<div class="card border-0 rounded-0 mb-0" id="contact" style="background:linear-gradient(to bottom right, lightpink, blueviolet);">
+  <h3 class="mb-0 px-3 py-3" style="display: flex; align-items: center; gap: 10px; color: white;">
+    Connect with me -
+    <span class="social-icons" style="display: flex; gap: 15px; margin-left: 10px;">
+      <a href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/stereena" target="_blank">
+        <i class="fab fa-linkedin" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="mailto:stereenapatrick@gmail.com" target="_blank">
+        <i class="fas fa-envelope" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank">
+        <i class="fab fa-instagram" style="font-size: 28px; color:white;"></i>
+      </a>
+    </span>
+  </h3>
+</div>
+
+
+
+  <footer class="bg-dark text-white text-center py-2" >
+    <p>&copy; 2025 Stereena Patrick. </p>
+  </footer>
+  <script>
+  // Typing for "Welcome to my Portfolio"
+  const title = "Welcome to my Portfolio";
+  let i = 0;
+  function typeTitle() {
+    if (i < title.length) {
+      document.getElementById("typing-title").textContent += title.charAt(i);
+      i++;
+      setTimeout(typeTitle, 100);
+    }
+  }
+  typeTitle();
+
+  // Typing for navbar name
+  const nameText = "Stereena";
+  let j = 0;
+  function typeName() {
+    if (j < nameText.length) {
+      document.getElementById("typing-name").textContent += nameText.charAt(j);
+      j++;
+      setTimeout(typeName, 150);
+    }
+  }
+  typeName();
+</script>
+
+
+
+</body>
+<script>
+  document.querySelectorAll('[style]').forEach(el => {
+    if (el.style.background || el.style.backgroundColor) {
+      el.style.background = '';
+      el.style.backgroundColor = '';
+    }
+  });
+  document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</html>

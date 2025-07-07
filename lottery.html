@@ -1,0 +1,48 @@
+<!--lotterydrawapp-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lottery Modal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>Lottery Draw</h2>
+    <button class="btn btn-danger mb-3" onclick="drawLottery()">Draw Winner</button>
+    <div id="winnerText"></div>
+  <div class="modal fade" id="winnerModal" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Winner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="modalWinnerText"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tickets = [1456,6784, 6754, 5467];
+
+    function drawLottery() {
+      const winner = tickets[Math.floor(Math.random() * tickets.length)];
+//text in console
+      console.log("Winner is: " + winner);
+
+//text in webpage
+      const textElement = document.getElementById("winnerText");
+      textElement.textContent = `The winning ticket number is ${winner}`;
+      textElement.style.color = "red";               
+      textElement.style.fontWeight = "bold";   
+//text in modal
+      document.getElementById("modalWinnerText").textContent = `Congratulations! Ticket #${winner} is the winner!`;
+
+      const modal = new bootstrap.Modal(document.getElementById("winnerModal"));
+      modal.show();
+    }
+  </script>
+    
+  </div>
+</body>
+</html>
