@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stereena Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<style>
+
+  #home {
+    padding-top: 100px;
+  transition: padding-top 0.3s ease;
+}
+
+  .login-wrapper {       
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  background: linear-gradient(to bottom right, lightpink, blueviolet);
+  color: white;
+  padding: 60px 30px;
+  min-height: 400px;
+}
+
+.right-section {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .left-section {
+    display: none;
+  }
+  .right-section {
+    flex: 1 1 100%;
+    background: linear-gradient(to bottom right, blueviolet, black);
+  }
+  .login-box {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+  }
+  .login-box .form-control {
+    background: white;
+    color: black;
+  }
+}
+
+.btn-primary {
+  background-color: black;
+  border: none;
+}
+
+  body {
+  background: radial-gradient(circle at top left, #2b1055, #1f0036, #0a001f);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+.typing-navbar {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-heading {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* ✅ Restrict max size on large screens */
+@media (min-width: 1200px) {
+  .typing-heading {
+    font-size: 60px; /* max cap for large desktops */
+  }
+}
+
+/* ✅ Adjust size for very small screens */
+@media (max-width: 576px) {
+  .typing-heading {
+    font-size: 8vw;
+    text-align: center;
+  }
+}
+
+
+  .card{
+     padding: 10px;
+  border-radius: 16px;
+  background: #0d0d0d;
+  color: white;
+  border: 3px solid transparent;
+  background-image: 
+    linear-gradient(#0d0d0d, #0d0d0d),
+    linear-gradient(45deg, #ff00ff, #8a2be2, #00ffff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4),
+              0 0 30px rgba(138, 43, 226, 0.5),
+              0 0 40px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: scale(1.05);
+}
+  }
+    .hero {
+      background: linear-gradient(to bottom right, lightpink, blueviolet);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .card-body.animate {
+      animation: slideUp 1.5s ease-out;
+    }
+
+    img.animate {
+      animation: zoomIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm bg-dark" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand text-white fw-bold typing-navbar d-flex align-items-center" href="#">
+      <img src="https://i.postimg.cc/138f5HbF/Whats-App-Image-2025-07-08-at-01-35-05-61afe6d4.jpg" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+      <span id="typing-name"></span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#projects">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#skill">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <section id=home class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 order-md-1 text-center text-md-start">
+          <h1 id="typing-title"
+    class="typing-heading text-center mt-5"
+    style="font-size: clamp(1.8rem, 5vw, 3.5rem);">
+</h1>
+         
+           <p>I’m a Web Developer in training, currently building a strong foundation in HTML, CSS, Bootstrap, JavaScript, Python, and SQL. I'm actively expanding my skills into React.js and Django as I progress through a full stack development course. I enjoy crafting clean, responsive user interfaces and bringing them to life with functionality and logic.
+                 I’m passionate about learning modern technologies and excited to grow as a developer by building real-world projects and collaborating on impactful web applications.</p>
+                 <!--3. MODIFIED "HIRE ME" BUTTON -->
+<a href="#" class="btn btn-dark me-2" style="color:white;" data-bs-toggle="modal" data-bs-target="#hireModal">Hire Me</a>
+
+<!-- 📌 4. MODIFIED RESUME BUTTON -->
+<a href="#" class="btn btn-dark dropdown-toggle" style="color:white;" data-bs-toggle="modal" data-bs-target="#resumeModal">Resume</a>
+
+<!-- 📌 5. HIRE ME MODAL -->
+<div class="modal fade" id="hireModal" tabindex="-1" aria-labelledby="hireModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Let's Work Together</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>I'm excited to work on meaningful projects. You can reach me at:</p>
+        <ul>
+          <li>Email: <strong>stereenapatrick@gmail.com</strong></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/stereena" target="_blank" style="color:lightblue;">stereena</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 📌 6. RESUME MODAL (with Google Drive Preview & Download Option) -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://drive.google.com/file/d/1wNvycb50jtFiwu2VaT9zCJyBy-ufecv2/preview?usp=sharing" width="100%" height="600px" style="border: none;"></iframe>
+        <div class="text-center mt-3">
+          <a href="https://drive.google.com/file/d/1wNvycb50jtFiwu2VaT9zCJyBy-ufecv2/preview?usp=sharing" target="_blank" class="btn btn-outline-light">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-4 text-center mt-6 pt-5">
+            <img src="https://i.postimg.cc/hjTCFVSW/Whats-App-Image-2025-07-07-at-13-14-35-3e50ea19.jpg" class="rounded img-fluid" alt = "Responsive Image" style="max-width: 100%; height: auto;" > 
+            </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="py-5" style="background:#C9A0DC">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:white;">ABOUT ME</h2>
+    <div class="row align-items-stretch">
+      
+      <!-- Left Column: Text Content -->
+      <!-- Right Column: Image (now appears first / on left) -->
+<div class="col-md-5 d-flex">
+  <img src="https://t4.ftcdn.net/jpg/07/44/39/67/360_F_744396718_RZ6UK8azeTMXPA5dSYVPrRGVNUmK2FMf.jpg" class="img-fluid rounded shadow w-100" style="object-fit: cover;">
+</div>
+
+<!-- Left Column: Text Content (now appears second / on right) -->
+<div class="col-md-7">
+  <div class="card shadow border-0">
+    <div class="card-body p-4" style="color:white; background: linear-gradient(135deg, #FF69B4, #8A2BE2);">
+      <p class="lead">
+        Hello! I'm <strong>Stereena Mary Patrick</strong>, a B.Tech graduate in <strong>Electronics and Communication Engineering</strong> with a strong interest in software development.
+      </p>
+      <p>
+        I'm currently enrolled in a <strong>Full Stack Python Development</strong> course and learning HTML, CSS, JavaScript, Bootstrap, Python, SQL — while diving into Django, React, and Git.
+      </p>
+      <p>
+        I’m also exploring <strong>Digital Marketing</strong> and <strong>Generative AI</strong> to expand my versatility in tech.
+      </p>
+      <p>
+        My goal is to become a <strong>skilled web developer</strong> contributing to real-world software projects.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<section id="projects" class="py-5 " style="background:linear-gradient(to left, #FFC0CB, #BA55D3, #800080);">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color:project;">Projects</h2>
+
+    <!-- ⚙️ Electronics Projects -->
+
+    <h4 class="mb-4" style="color:white;">⚙️ Electronics Projects</h4>
+    <div class="row g-4 mb-5">
+      
+      <!-- Pelican Crossing -->
+
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://www.driving-lessons-kettering.co.uk/wp-content/uploads/2020/01/pelican-crossing-1.jpg" class="card-img-top" alt="Pelican Crossing Project"  style="height: 180px; object-fit: cover;" >
+          <div class="card-body">
+            <h5 class="card-title">Pelican Crossing System</h5>
+            <p class="card-text">Arduino-based pedestrian crossing using IR sensors for safe and smart traffic control.</p>
+            <p><strong>Tools:</strong> Arduino, IR Sensors, C</p>
+            <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#pelicanModal">View Details</a>
+
+          </div>
+        </div>
+      </div>
+      <!-- Pelican Crossing Modal -->
+<div class="modal fade" id="pelicanModal" tabindex="-1" aria-labelledby="pelicanModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pelicanModalLabel">Pelican Crossing System – Project PDF</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://drive.google.com/file/d/1YbHepom4TYGC5GVBTwIvEeUCzGUL36uf/preview" width="100%" height="600px" style="border: none;"></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Railway Monitoring -->
+
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://www.selectravision.com/photos/products/track/trackT%20-%20measuring%20tracks%20-%20real.jpg" class="card-img-top" alt="Railway Track Monitoring"   style="height: 180px; object-fit: cover;" >
+          <div class="card-body">
+            <h5 class="card-title">Railway Track Monitoring Tool</h5>
+            <p class="card-text">Real-time railway defect detection with GPS alert system for enhanced safety and monitoring.</p>
+            <p><strong>Tools:</strong> GPS, Sensors, Embedded</p>
+            <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#rtmtModal">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RT-MT Modal -->
+<div class="modal fade" id="rtmtModal" tabindex="-1" aria-labelledby="rtmtModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rtmtModalLabel">Railway Track Monitoring Tool – Project PDF</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://drive.google.com/file/d/13a0zUAwk8h888NA--A9iFIH1k9LJUs-p/preview" width="100%" height="600px" style="border: none;"></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- 💻 Web Development Projects -->
+
+    <h4 class="mb-4" style="color:white;">💻 Web Development Projects</h4>
+    <div class="row g-4">
+
+      <!-- Portfolio Website (Current Project) -->
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Personal Portfolio Website</h5>
+            <p class="card-text">A responsive and interactive personal portfolio showcasing my skills, projects, and career journey. Built using modern web technologies.</p>
+            <p><strong>Tools:</strong> HTML, CSS, Bootstrap, JavaScript</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Live Preview</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Page -->
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Responsive Login Page</h5>
+            <p class="card-text">Mobile-first login form styled with media queries to adapt seamlessly to different devices.</p>
+            <p><strong>Tools:</strong> HTML, CSS</p>
+            <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">View Demo</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Page Modal -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <div class="login-wrapper d-flex flex-wrap w-100">
+          
+          <!-- Left Section (Hidden on Mobile) -->
+          <div class="col-md-6 left-section d-flex flex-column justify-content-center align-items-center">
+            <h2 class="display-5 fw-bold">Welcome Back!</h2>
+            <p class="lead text-center">Join the community of learners and creators.<br>Start building your future.</p>
+          </div>
+
+          <!-- Right Login Form -->
+          <div class="col-md-6 right-section">
+            <div class="login-box">
+              <h3 class="text-center mb-4">Login</h3>
+              <form onsubmit="event.preventDefault(); alert('Login form submitted!');">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Calculator -->
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">JavaScript Calculator</h5>
+            <p class="card-text">A basic calculator that performs all four arithmetic operations using custom JS functions.</p>
+            <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+            <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#calculatorModal">View Demo</a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator Modal -->
+
+<div class="modal fade" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="calculatorModalLabel">Calculator</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Calculator Form -->
+        <div class="container mb-3">
+          <div class="row g-2">
+            <div class="col-6">
+              <input type="number" id="num1" class="form-control" placeholder="Enter first number">
+            </div>
+            <div class="col-6">
+              <input type="number" id="num2" class="form-control" placeholder="Enter second number">
+            </div>
+            <div class="col-6">
+              <select id="operator" class="form-select mt-2">
+                <option value="+">Add (+)</option>
+                <option value="-">Subtract (-)</option>
+                <option value="*">Multiply (*)</option>
+                <option value="/">Divide (/)</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-success mt-2 w-100" onclick="calculate()">Calculate</button>
+            </div>
+          </div>
+          <div class="result mt-3 fs-5 fw-bold text-white" id="finalResult"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Lottery Draw -->
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Lottery Draw Web App</h5>
+            <p class="card-text">Random winner generator styled with Bootstrap modals and colorful console feedback.</p>
+            <p><strong>Tools:</strong> JavaScript, Bootstrap</p>
+            <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#lotteryModal">View Demo</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Lottery Draw Modal -->
+
+<div class="modal fade" id="lotteryModal" tabindex="-1" aria-labelledby="lotteryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lotteryModalLabel">🎉 Lottery Draw</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-danger mb-3" onclick="drawLottery()">Draw Winner</button>
+        <div id="winnerText" class="fs-5 mt-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Winner Modal (Nested) -->
+<div class="modal fade" id="winnerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-success text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">🏆 Winner</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalWinnerText"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Skill Section -->
+
+<section id="skill" class="container-fluid mb-0 pb-0" style="background: linear-gradient(to bottom right, lightpink, blueviolet);">
+  <h2 class="section-title text-white pt-4">Skills</h2>
+  <ul class="text-white pb-3">
+    <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, JavaScript</li>
+    <li><strong>Backend:</strong> Python, SQL (PostgreSQL)</li>
+    <li><strong>Currently Learning:</strong> Django, React, Git</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<div class="card border-0 rounded-0 mb-0" id="contact" style="background:linear-gradient(to bottom right, lightpink, blueviolet);">
+  <h3 class="mb-0 px-3 py-3" style="display: flex; align-items: center; gap: 10px; color: white;">
+    Connect with me -
+    <span class="social-icons" style="display: flex; gap: 15px; margin-left: 10px;">
+      <a href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/stereena" target="_blank">
+        <i class="fab fa-linkedin" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="mailto:stereenapatrick@gmail.com" target="_blank">
+        <i class="fas fa-envelope" style="font-size: 28px; color:white;"></i>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank">
+        <i class="fab fa-instagram" style="font-size: 28px; color:white;"></i>
+      </a>
+    </span>
+  </h3>
+</div>
+
+
+  <footer class="bg-dark text-white text-center py-2" >
+    <p>&copy; 2025 Stereena Patrick. </p>
+  </footer>
+  <script>
+  // Typing for "Welcome to my Portfolio"
+  const title = "Welcome to my Portfolio";
+  let i = 0;
+  function typeTitle() {
+    if (i < title.length) {
+      document.getElementById("typing-title").textContent += title.charAt(i);
+      i++;
+      setTimeout(typeTitle, 100);
+    }
+  }
+  typeTitle();
+
+  // Typing for navbar name
+  const nameText = "Stereena";
+  let j = 0;
+  function typeName() {
+    if (j < nameText.length) {
+      document.getElementById("typing-name").textContent += nameText.charAt(j);
+      j++;
+      setTimeout(typeName, 150);
+    }
+  }
+  typeName();
+</script>
+<script>
+  function adjustHeroPadding() {
+    const navbar = document.querySelector('.navbar');
+    const home = document.querySelector('#home');
+
+    if (navbar && home) {
+      const navHeight = navbar.offsetHeight;
+      home.style.paddingTop = (navHeight + 20) + 'px'; // 20px extra space
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', adjustHeroPadding);
+  window.addEventListener('resize', adjustHeroPadding);
+</script>
+
+
+<!--script for calculator-->
+
+<script>
+  function calculate() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const operator = document.getElementById('operator').value;
+    let result = '';
+
+    if (isNaN(num1) || isNaN(num2)) {
+      result = "Please enter both numbers.";
+    } else {
+      switch (operator) {
+        case '+':
+          result = `Result: ${num1 + num2}`;
+          break;
+        case '-':
+          result = `Result: ${num1 - num2}`;
+          break;
+        case '*':
+          result = `Result: ${num1 * num2}`;
+          break;
+        case '/':
+          result = num2 !== 0 ? `Result: ${num1 / num2}` : "Cannot divide by zero.";
+          break;
+        default:
+          result = "Invalid operator";
+      }
+    }
+
+    document.getElementById('finalResult').textContent = result;
+  }
+</script>
+
+<!--script for lottery-->
+
+<script>
+  const tickets = [1456, 6784, 6754, 5467];
+
+  function drawLottery() {
+    const winner = tickets[Math.floor(Math.random() * tickets.length)];
+
+    // Show in main modal
+    const textElement = document.getElementById("winnerText");
+    textElement.textContent = `🎫 Winning ticket number is ${winner}`;
+    textElement.style.color = "lightgreen";
+    textElement.style.fontWeight = "bold";
+
+    // Show in nested winner modal
+    document.getElementById("modalWinnerText").textContent = `🎉 Congratulations! Ticket #${winner} is the winner!`;
+
+    // Trigger nested modal
+    const modal = new bootstrap.Modal(document.getElementById("winnerModal"));
+    modal.show();
+  }
+</script>
+
+
+
+</body>
+<script>
+  document.querySelectorAll('[style]').forEach(el => {
+    if (el.style.background || el.style.backgroundColor) {
+      el.style.background = '';
+      el.style.backgroundColor = '';
+    }
+  });
+  document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</html>
